@@ -59,6 +59,4 @@ let gerenciamentoRedes = () => {
       `A quantidades de posts na rede social ${redes[i].nome} é ${conta}`
     );
   }
-
-  
-}
+};
