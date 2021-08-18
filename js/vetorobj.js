@@ -21,7 +21,6 @@ let gerenciamentoRedes = () => {
     };
     let achou = false;
     let j = 0;
-    
 
     while (!achou && j < 5) {
       if (infoUser.codRede == redes[j].codigo) {
@@ -35,6 +34,31 @@ let gerenciamentoRedes = () => {
     }
   }
 
-  
-};
+  let codigoRede = Number(prompt("De o codigo da rede social"));
 
+  let conta = 0;
+  for (let i = 0; i < 5; i++) {
+    if (usuarios[i].codRede == codigo) {
+      conta += usuarios[i].qtdPost;
+    }
+  }
+  if (conta == 0) {
+    console.log("Não houve postagem ou rede social não existe");
+  } else {
+    console.log(`Houveram ${conata} votos na rede social ${codigo}`);
+  }
+
+  for (let i = 0; i < 5; i++) {
+    let conta = 0;
+    for (let j = 0; j < 5; j++) {
+      if (redes[i].codigo == usuarios[i].codRede) {
+        conta += usuarios[i].qtdPost;
+      }
+    }
+    console.log(
+      `A quantidades de posts na rede social ${redes[i].nome} é ${conta}`
+    );
+  }
+
+  
+}
