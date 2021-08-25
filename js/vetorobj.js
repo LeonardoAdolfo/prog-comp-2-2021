@@ -59,4 +59,22 @@ let gerenciamentoRedes = () => {
       `A quantidades de posts na rede social ${redes[i].nome} é ${conta}`
     );
   }
+
+
+
+  let login = prompt('Informe o Login desejado')
+  let somaPost
+  let achou = false
+  for (let i = 0; i <5; i++) {
+    if (login==usuarios[i].login) {
+      somaPost += usuarios[i].qtdPost
+      achou = true
+    } 
+  }
+  if (achou ) {
+    alert(`O usuario com login ${login} realizou ${somaPost} posts`)
+  }
+  else{
+    alert(`Ususario não existe !!!`)
+  }
 };
