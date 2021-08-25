@@ -83,7 +83,7 @@ let gerenciamentoRedes = () => {
   for (let i = 0; i < 5; i++) {
     let achou = false
     for (let j = 0; j < userPost.length; j++) {
-      if(usuarios[i].login == userPost[i].login){
+      if(usuarios[i].login == userPost[j].login){
         userPost[j].post += usuarios[j].qtdPost
         achou = true
       }
