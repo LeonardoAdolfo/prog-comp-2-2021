@@ -60,7 +60,7 @@ let gerenciamentoRedes = () => {
     );
   }
 
-
+////////////////////////////////////////////////////////////////////////////////////
 
   let login = prompt('Informe o Login desejado')
   let somaPost
@@ -76,5 +76,23 @@ let gerenciamentoRedes = () => {
   }
   else{
     alert(`Ususario não existe !!!`)
+  }
+//////////////////////////////////////////////////////////////////////////////////
+  let userPost = []
+
+  for (let i = 0; i < 5; i++) {
+    let achou = false
+    for (let j = 0; j < userPost.length; j++) {
+      if(usuarios[i].login == userPost[i].login){
+        userPost[j].post += usuarios[j].qtdPost
+        achou = true
+      }
+    }
+    if (!achou) {
+      userPost.push({
+        login: usuarios[i].login,
+        post: usuarios[i].qtdPost
+      })
+    }
   }
 };
