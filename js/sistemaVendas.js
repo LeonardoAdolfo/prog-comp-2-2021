@@ -55,7 +55,7 @@ let sistemaVendas = ()=>{
                      console.log(`NÃO ACHOU A VENDA`)
                  }
             break
-        case 4: alert(`Programa encerrado`)
+        case 4:
             let codigo4 = Number(prompt(`Informe o codigo do vendedor`))
             let soma = 0
             let achou4 = false 
@@ -73,10 +73,24 @@ let sistemaVendas = ()=>{
             }
 
             break
-            case 5: alert(`Programa encerrado`)
+        case 5: 
+            let mes5 = Number(prompt(`Informe o mes de interesse `))
+            let maiorValor = 0
+            let vendedorMaisVendeu = 0
+            for (let i = 0; i < vetVendas.length; i++) {
+                if (vetVendas[i].mes == mes5) {
+                    if (vetVendas[i].valor> maiorValor) {
+                        maiorValor = vetVendas[i].valor
+                        vendedorMaisVendeu = vetVendas[i].codigo
+                    }
+                }
+            }
+            console.log(`O ${vendedorMaisVendeu} foi o que mais vendeu, e ele vendeu ${maiorValor}`)
+            break
+        case 6: alert(`Programa encerrado`)
             break
         default: alert(`Opção Invalida !!`)
     }
    }
-   while(opcao!=4)
+   while(opcao!=6)
 }
