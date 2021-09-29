@@ -135,5 +135,6 @@ let sistemaVendas = () => {
           vetMeses[aux - 1] = vetMeses[aux - 1] + vetVendas[i].valor;
         }
         console.log(vetMeses);
+      
   }
 };
