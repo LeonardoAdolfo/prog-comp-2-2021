@@ -6,7 +6,7 @@ let sistemasNotas =() => {
     mat[3] = []
 
     for (let i = 0; i < 4; i++) {
-        alert(`Informe as notas do aluno ${n+1}`)
+        alert(`Informe as notas do aluno ${i+1}`)
         for (let j = 0; j < 4; j++) {
             mat[i][j] = Number(prompt(`Informa a nota ${j+1}`))
             
