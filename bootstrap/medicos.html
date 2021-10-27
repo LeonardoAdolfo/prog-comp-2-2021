@@ -27,18 +27,10 @@
           </button>
           <div class="collapse navbar-collapse" id="conteudo">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="pacientes.html" class="nav-link">Paciente</a>
-              </li>
-              <li class="nav-item">
-                <a href="medicos.html" class="nav-link">Medicos</a>
-              </li>
-              <li class="nav-item">
-                <a href="sobre.html" class="nav-link">Sobre</a>
-              </li>
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="pacientes.html" class="nav-link">Paciente</a></li>
+              <li class="nav-item"><a href="medicos.html" class="nav-link">Medicos</a></li>
+              <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
             </ul>
           </div>
         </div>
@@ -46,15 +38,46 @@
     </header>
     <main>
       <div class="container">
-        <h2>Sistema de Prontuário Eletrónico de Paciente</h2>
+        <h4>Lista de Medicos</h4>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+            <th>Escolha</th>
+            <th>Nome</th>
+            <th>CRM</th>
+            <th>Especialidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio"  name="escolha" id="12345"></td>
+              <td>João Euclides</td>
+              <td>12345</td>
+              <td>Pediatra</td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="escolha" id="154855"></td>
+              <td>Pedro Alves</td>
+              <td>154855</td>
+              <td>Geriatra</td>
+            </tr>
+            <tr>
+              <td><input type="radio" name="escolha" id="15544855"></td>
+              <td>Jacinto Pinto Aquino Rego</td>
+              <td>15544855</td>
+              <td>Mastologista</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      
     </main>
     <footer>
       <div class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-          <h8>Feito pela turma do 2° semestre de comp. de Uni-FACEF</h8>
-        </div>
+        <div class="container"><h8>Feito pela turma do 2° semestre de comp. de Uni-FACEF</h8></div>
+        
       </div>
+      
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
