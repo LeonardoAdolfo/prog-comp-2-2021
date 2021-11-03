@@ -11,6 +11,25 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script>
+      let chamaApi = ()=>{
+        let cep = Number(document.getElementById('cep').value)
+
+        let req = new XMLHttpRequest()
+
+        req.open('GET', `https://viacep.com.br/ws/${cep}/json`, true)
+
+        req.onload = function(){
+          let conteudo = JSON.parse(this.response)
+
+          document.getElementById('logardouro').value = conteudo.logradouro
+          document.getElementById('cidade').value = conteudo.localidade 
+          document.getElementById('bairro').value = conteudo.bairro
+          document.getElementById('estado').value = conteudo.uf
+        }
+        req.send()
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -85,6 +104,27 @@
               />
               <label for="feminino" class="form-check-label">Feminino</label>
             </div>
+          </div>
+          <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" name="cep" id="cep" class="form-control" placeholder="Colocar sem os pontos e traços"></component>
+            <button class="btn btn-info mt-3" type="button" onclick="chamaApi()">Buscar</button>
+          </div>
+          <div class="mb-3">
+            <label for="logradouro" class="form-label">Logradouro</label>
+            <input type="text" name="logradouro" id="logardouro" class="form-control" readonly></component>
+          </div>
+          <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" name="cidade" id="cidade" class="form-control" readonly></component>
+          </div>
+          <div class="mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" name="estado" id="estado" class="form-control" readonly></component>
+          </div>
+          <div class="mb-3">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" name="bairro" id="bairro" class="form-control" readonly></component>
           </div>
           <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
